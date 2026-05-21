@@ -1,0 +1,8 @@
+@defer (when matchHistory() !== null) {
+  @for (match of matchHistory(); track match.kills) {
+    <app-match-history-card [matchRecordModel]="match"></app-match-history-card>
+  }
+} @loading(minimum 1000ms) {
+  <app-match-history-card-skeleton></app-match-history-card-skeleton>
+} @placeholder (minimum 1000ms) {
+}
