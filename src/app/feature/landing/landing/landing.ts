@@ -1,11 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { LandingService } from '@/feature/landing/landing-service';
 import { Ladder } from '@/feature/landing/landing/ladder/ladder';
+import { SearchBar } from '@/feature/landing/landing/search-bar/search-bar';
 
 @Component({
   selector: 'app-landing',
   imports: [
-    Ladder
+    Ladder,
+    SearchBar
   ],
   templateUrl: './landing.html',
   styleUrl: './landing.css',

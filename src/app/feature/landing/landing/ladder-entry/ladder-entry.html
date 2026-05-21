@@ -1,15 +1,33 @@
-<z-card>
+<z-card class="min-w-xl py-4">
   <div class="flex justify-between items-center">
     <div class="flex items-center gap-4">
-      <span class="">{{ ladderEntryModel().rank }}</span>
-      <div class="rounded-full bg-black size-9"></div>
-      <span>{{ ladderEntryModel().summonerName }}</span>
-      <span>#</span>
-      <span>{{ ladderEntryModel().summonerTag }}</span>
+      <span class="font-bold">{{ ladderEntryModel().rank }}</span>
+      <img
+        [ngSrc]="ddragonService.getProfileIconUrl(ladderEntryModel().summonerProfileIconId)"
+        height="36"
+        width="36"
+        priority
+        alt=""
+        class="rounded-lg"
+      />
+      <p>
+        <span class="font-medium">{{ ladderEntryModel().summonerName }}</span>
+        <span class="ml-2 text-sm">#{{ ladderEntryModel().summonerTag }}</span>
+      </p>
     </div>
     <div class="flex items-center gap-2">
-      <span>{{ ladderEntryModel().lp }}</span>
-      <span>LP</span>
+      <img
+        ngSrc="https://opgg-static.akamaized.net/images/medals_mini/master.png"
+        height="36"
+        width="36"
+        priority
+        alt=""
+        class="rounded-lg"
+      />
+      <p>
+        <span class="font-medium">{{ ladderEntryModel().lp }}</span>
+        <span class="ml-2 text-sm">LP</span>
+      </p>
     </div>
   </div>
 </z-card>

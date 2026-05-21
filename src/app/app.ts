@@ -1,12 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Navbar } from '@/global/navbar/navbar';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  template: `
-    <router-outlet/>
-  `,
+  imports: [RouterOutlet, Navbar],
+  templateUrl: './app.html',
 })
 export class App {
   readonly count = signal(0);

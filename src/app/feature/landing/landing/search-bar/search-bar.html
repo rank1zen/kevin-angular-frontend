@@ -1,0 +1,20 @@
+<div class="flex flex-col items-center">
+  <form>
+    <input
+      class="min-w-xs"
+      z-input
+      type="text"
+      placeholder="Search"
+      [formField]="form"
+      (focus)="formIsFocused.set(true)"
+      (blur)="formIsFocused.set(false)"
+    />
+  </form>
+  @if (shouldShowResults()) {
+    <div class="relative mt-4">
+      <z-card class="absolute">
+        <div>Results</div>
+      </z-card>
+    </div>
+  }
+</div>
