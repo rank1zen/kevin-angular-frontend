@@ -4,7 +4,13 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class DdragonService {
+  private baseUrl = 'https://ddragon.leagueoflegends.com/cdn/16.10.1';
+
   getProfileIconUrl(id: number): string {
-    return `https://ddragon.leagueoflegends.com/cdn/16.10.1/img/profileicon/${id}.png`;
+    return `${this.baseUrl}/img/profileicon/${id}.png`;
+  }
+
+  getChampionIconUrl(id: number): string {
+    return `${this.baseUrl}/img/champion/Aatrox.png`;
   }
 }

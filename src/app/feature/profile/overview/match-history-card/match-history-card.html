@@ -1,7 +1,24 @@
 <z-card class="min-w-xl">
-  <div class="flex justify-between items-center">
+  <div class="flex items-start gap-4 justify-between">
+    <div class="flex items-start gap-4">
+      <app-champion-widget [championId]="2"></app-champion-widget>
+      <div class="flex flex-col gap-1.5">
+        <h3 class="font-semibold tracking-tight leading-none">Ranked Solo/Duo</h3>
+        <div class="flex gap-1">
+          <z-badge zType="secondary">13:11</z-badge>
+          <z-badge zType="secondary">Fri May 22</z-badge>
+        </div>
+      </div>
+    </div>
     <div>
-      <span>{{matchRecordModel().kills}}</span>
+      <button z-button zSize="sm">Expand
+        <ng-icon name="lucidePopcorn" />
+      </button>
     </div>
   </div>
+</z-card>
+
+<z-card class="mt-4">
+  <z-segmented [zOptions]="options" zDefaultValue="all" (zChange)="onSelectionChange($event)" class="w-full" />
+  <app-scoreboard [data]="{players: []}"></app-scoreboard>
 </z-card>

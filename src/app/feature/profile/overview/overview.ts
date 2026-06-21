@@ -4,12 +4,14 @@ import { MatchRecordModel, ProfileService } from '@/feature/profile/profile-serv
 import {
   MatchHistoryCardSkeleton
 } from '@/feature/profile/overview/match-history-card-skeleton/match-history-card-skeleton';
+import { LayoutImports } from '@/shared/components/layout/layout.imports';
 
 @Component({
   selector: 'app-overview',
   imports: [
     MatchHistoryCard,
-    MatchHistoryCardSkeleton
+    MatchHistoryCardSkeleton,
+    LayoutImports
   ],
   templateUrl: './overview.html',
   styleUrl: './overview.css',

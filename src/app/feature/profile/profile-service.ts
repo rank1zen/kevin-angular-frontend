@@ -22,6 +22,10 @@ export class ProfileService {
       }
     ]
   }
+
+  getMatchDetail(): {
+    
+  }
 }
 
 export type SummonerModel = {
