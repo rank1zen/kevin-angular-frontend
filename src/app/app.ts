@@ -7,6 +7,4 @@ import { Navbar } from '@/global/navbar/navbar';
   imports: [RouterOutlet, Navbar],
   templateUrl: './app.html',
 })
-export class App {
-  readonly count = signal(0);
-}
+export class App {}

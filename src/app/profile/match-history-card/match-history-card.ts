@@ -1,46 +1,33 @@
 import { Component, inject, input } from '@angular/core';
-import { MatchRecordModel } from '@/feature/profile/profile-service';
 import { ZardCardComponent } from '@/shared/components/card';
-import { DdragonService } from '@/global/ddragon-service';
-import { ChampionWidget } from '@/feature/profile/overview/match-history-card/champion-widget/champion-widget';
 import { ZardBadgeComponent } from '@/shared/components/badge';
 import { ZardButtonComponent } from '@/shared/components/button';
 import { lucideArrowUp, lucidePopcorn } from '@ng-icons/lucide';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { ZardSegmentedComponent } from '@/shared/components/segmented';
+import { Match } from '@/profile/match';
 import { ZardAvatarComponent, ZardAvatarGroupComponent } from '@/shared/components/avatar';
-import { ScoreboardEntry } from '@/feature/profile/overview/match-history-card/scoreboard/scoreboard-entry/scoreboard-entry';
-import { Scoreboard } from '@/feature/profile/overview/match-history-card/scoreboard/scoreboard';
-
-export type MathHistoryCardData = {
-  championId: number;
-  summonerSpellIds: number[];
-  itemIds: number[];
-  kills: number;
-  deaths: number;
-  assists: number;
-};
+import { DdragonService } from '@/global/ddragon-service';
 
 @Component({
   selector: 'app-match-history-card',
   imports: [
     ZardCardComponent,
-    ChampionWidget,
     ZardBadgeComponent,
     ZardButtonComponent,
     NgIcon,
     ZardSegmentedComponent,
     ZardAvatarComponent,
     ZardAvatarGroupComponent,
-    ScoreboardEntry,
-    Scoreboard
   ],
   templateUrl: './match-history-card.html',
   styleUrl: './match-history-card.css',
   viewProviders: [provideIcons({ lucideArrowUp, lucidePopcorn })],
 })
 export class MatchHistoryCard {
-  data = input.required<MathHistoryCardData>()
+  protected readonly ddragonService = inject(DdragonService);
+
+  readonly match = input.required<Match>();
 
   options = [
     { value: 'all', label: 'All' },

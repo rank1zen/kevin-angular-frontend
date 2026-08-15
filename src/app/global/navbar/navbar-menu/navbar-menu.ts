@@ -9,7 +9,6 @@ import { LucideMenu } from '@lucide/angular';
   selector: 'app-navbar-menu',
   imports: [
     ZardDropdownImports,
-    ZardDividerComponent,
     ZardMenuImports,
     ZardButtonComponent,
     LucideMenu

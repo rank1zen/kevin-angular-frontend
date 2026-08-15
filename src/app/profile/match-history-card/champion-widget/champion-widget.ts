@@ -6,7 +6,6 @@ import { ZardAvatarComponent, ZardAvatarGroupComponent } from '@/shared/componen
 @Component({
   selector: 'app-champion-widget',
   imports: [
-    NgOptimizedImage,
     ZardAvatarComponent,
     ZardAvatarGroupComponent
   ],

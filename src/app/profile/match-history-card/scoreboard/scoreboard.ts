@@ -2,7 +2,7 @@ import { Component, input } from '@angular/core';
 import {
   ScoreboardEntry,
   ScoreboardEntryData
-} from '@/feature/profile/overview/match-history-card/scoreboard/scoreboard-entry/scoreboard-entry';
+} from '@/profile/match-history-card/scoreboard/scoreboard-entry/scoreboard-entry';
 
 export type ScoreboardData = {
   players: ScoreboardEntryData[]

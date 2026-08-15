@@ -1,0 +1,31 @@
+<ng-template>
+  <z-card class="mt-4">
+    <z-segmented [zOptions]="options" zDefaultValue="all" (zChange)="onSelectionChange($event)" class="w-full" />
+  </z-card>
+</ng-template>
+
+<z-card class="min-w-xl">
+  <div class="flex items-start gap-4 justify-between">
+    <div class="flex items-start gap-4">
+      <div class="flex gap-0.5 items-start">
+        <z-avatar [zSrc]="ddragonService.getChampionIconUrl(2)" zShape="rounded"/>
+        <z-avatar-group>
+          <z-avatar zSrc="https://ddragon.leagueoflegends.com/cdn/16.10.1/img/spell/SummonerFlash.png" zSize="sm" zShape="rounded"/>
+          <z-avatar zSrc="https://ddragon.leagueoflegends.com/cdn/16.10.1/img/spell/SummonerDot.png" zSize="sm" zShape="rounded"/>
+        </z-avatar-group>
+      </div>
+      <div class="flex flex-col gap-1.5">
+        <h3 class="font-semibold tracking-tight leading-none">Ranked Solo/Duo</h3>
+        <div class="flex gap-1">
+          <z-badge zType="secondary">13:11</z-badge>
+          <z-badge zType="secondary">Fri May 22</z-badge>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button z-button zSize="sm">Expand
+        <ng-icon name="lucidePopcorn" />
+      </button>
+    </div>
+  </div>
+</z-card>
