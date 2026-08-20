@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ZardDropdownImports } from '@/shared/components/dropdown';
 import { ZardButtonComponent } from '@/shared/components/button';
 import { LucideMenu } from '@lucide/angular';

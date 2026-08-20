@@ -1,5 +1,4 @@
-import { Component, inject, input, ChangeDetectionStrategy } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common';
+import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
 import { DdragonService } from '@/ddragon/ddragon-service';
 import { ZardAvatarComponent, ZardAvatarGroupComponent } from '@/shared/components/avatar';
 

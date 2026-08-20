@@ -1,4 +1,4 @@
-import { Component, inject, input, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
 import { ZardAvatarComponent, ZardAvatarGroupComponent } from '@/shared/components/avatar';
 import { DdragonService } from '@/ddragon/ddragon-service';
 

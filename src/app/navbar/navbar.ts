@@ -1,9 +1,8 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { NavbarMenu } from '@/navbar/navbar-menu/navbar-menu';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
-  imports: [NavbarMenu],
+  imports: [],
   templateUrl: './navbar.html',
   changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './navbar.css',

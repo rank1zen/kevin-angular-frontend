@@ -1,20 +1,13 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   computed,
   inject,
   input,
-  OnInit,
   resource,
-  signal,
-  ChangeDetectionStrategy,
 } from '@angular/core';
-import { Match } from '@/profile/match';
 import { MatchHistoryCard } from '@/profile/match-history-card/match-history-card';
 import { ProfileService } from '@/profile/profile-service';
-import { toSignal } from '@angular/core/rxjs-interop';
-import { map } from 'rxjs';
-import { Summoner } from '@/profile/summoner';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-profile-match-list',
