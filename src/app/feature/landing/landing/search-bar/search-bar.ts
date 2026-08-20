@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ZardInputDirective } from '@/shared/components/input';
 import { form, FormField } from '@angular/forms/signals';
@@ -7,14 +7,10 @@ import { ZardCardComponent } from '@/shared/components/card';
 
 @Component({
   selector: 'app-search-bar',
-  imports: [
-    ZardInputDirective,
-    ReactiveFormsModule,
-    FormField,
-    ZardCardComponent
-  ],
+  imports: [ZardInputDirective, ReactiveFormsModule, FormField, ZardCardComponent],
   templateUrl: './search-bar.html',
-  styleUrl: './search-bar.css'
+  changeDetection: ChangeDetectionStrategy.Eager,
+  styleUrl: './search-bar.css',
 })
 export class SearchBar {
   formData = signal('');
@@ -23,13 +19,13 @@ export class SearchBar {
 
   landingService = inject(LandingService);
 
-  searchResults = signal({})
+  searchResults = signal({});
 
   formIsFocused = signal(false);
 
   onSubmit() {
-    const results = this.landingService.getSearchResults(this.formData())
-    this.searchResults.set(results)
+    const results = this.landingService.getSearchResults(this.formData());
+    this.searchResults.set(results);
   }
 
   shouldShowResults() {

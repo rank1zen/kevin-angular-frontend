@@ -1,4 +1,13 @@
-import { Component, computed, inject, input, OnInit, resource, signal } from '@angular/core';
+import {
+  Component,
+  computed,
+  inject,
+  input,
+  OnInit,
+  resource,
+  signal,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { Match } from '@/profile/match';
 import { MatchHistoryCard } from '@/profile/match-history-card/match-history-card';
 import { ProfileService } from '@/profile/profile-service';
@@ -11,10 +20,11 @@ import { ActivatedRoute } from '@angular/router';
   selector: 'app-profile-match-list',
   imports: [MatchHistoryCard],
   templateUrl: './profile-match-list.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './profile-match-list.css',
 })
 export class ProfileMatchList {
-  readonly puuid = input.required<string>()
+  readonly puuid = input.required<string>();
 
   private readonly profileService = inject(ProfileService);
 

@@ -1,4 +1,4 @@
-import { Component, inject, input } from '@angular/core';
+import { Component, inject, input, ChangeDetectionStrategy } from '@angular/core';
 import { ZardCardComponent } from '@/shared/components/card';
 import { ZardBadgeComponent } from '@/shared/components/badge';
 import { ZardButtonComponent } from '@/shared/components/button';
@@ -22,6 +22,7 @@ import { DdragonService } from '@/global/ddragon-service';
   ],
   templateUrl: './match-history-card.html',
   styleUrl: './match-history-card.css',
+  changeDetection: ChangeDetectionStrategy.Eager,
   viewProviders: [provideIcons({ lucideArrowUp, lucidePopcorn })],
 })
 export class MatchHistoryCard {

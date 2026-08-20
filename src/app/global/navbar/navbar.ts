@@ -1,12 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { NavbarMenu } from '@/global/navbar/navbar-menu/navbar-menu';
 
 @Component({
   selector: 'app-navbar',
-  imports: [
-    NavbarMenu,
-  ],
+  imports: [NavbarMenu],
   templateUrl: './navbar.html',
-  styleUrl: './navbar.css'
+  changeDetection: ChangeDetectionStrategy.Eager,
+  styleUrl: './navbar.css',
 })
 export class Navbar {}

@@ -1,17 +1,18 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 import {
   ScoreboardEntry,
-  ScoreboardEntryData
+  ScoreboardEntryData,
 } from '@/profile/match-history-card/scoreboard/scoreboard-entry/scoreboard-entry';
 
 export type ScoreboardData = {
-  players: ScoreboardEntryData[]
-}
+  players: ScoreboardEntryData[];
+};
 
 @Component({
   selector: 'app-scoreboard',
   imports: [ScoreboardEntry],
   templateUrl: './scoreboard.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './scoreboard.css',
 })
 export class Scoreboard {
