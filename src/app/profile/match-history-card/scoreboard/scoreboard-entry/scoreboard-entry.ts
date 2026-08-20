@@ -1,6 +1,6 @@
 import { Component, inject, input, ChangeDetectionStrategy } from '@angular/core';
 import { ZardAvatarComponent, ZardAvatarGroupComponent } from '@/shared/components/avatar';
-import { DdragonService } from '@/global/ddragon-service';
+import { DdragonService } from '@/ddragon/ddragon-service';
 
 export type ScoreboardEntryData = {
   summonerPuuid: string;

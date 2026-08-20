@@ -1,9 +1,3 @@
-<ng-template>
-  <z-card class="mt-4">
-    <z-segmented [zOptions]="options" zDefaultValue="all" (zChange)="onSelectionChange($event)" class="w-full" />
-  </z-card>
-</ng-template>
-
 <z-card class="min-w-xl">
   <div class="flex items-start gap-4 justify-between">
     <div class="flex items-start gap-4">
@@ -24,7 +18,6 @@
     </div>
     <div>
       <button z-button zSize="sm">Expand
-        <ng-icon name="lucidePopcorn" />
       </button>
     </div>
   </div>

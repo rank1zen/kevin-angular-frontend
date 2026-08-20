@@ -1,6 +1,6 @@
 import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Navbar } from '@/global/navbar/navbar';
+import { Navbar } from '@/navbar/navbar';
 
 @Component({
   selector: 'app-root',

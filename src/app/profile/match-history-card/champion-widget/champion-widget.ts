@@ -1,6 +1,6 @@
 import { Component, inject, input, ChangeDetectionStrategy } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
-import { DdragonService } from '@/global/ddragon-service';
+import { DdragonService } from '@/ddragon/ddragon-service';
 import { ZardAvatarComponent, ZardAvatarGroupComponent } from '@/shared/components/avatar';
 
 @Component({

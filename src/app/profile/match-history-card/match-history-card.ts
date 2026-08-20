@@ -3,11 +3,10 @@ import { ZardCardComponent } from '@/shared/components/card';
 import { ZardBadgeComponent } from '@/shared/components/badge';
 import { ZardButtonComponent } from '@/shared/components/button';
 import { lucideArrowUp, lucidePopcorn } from '@ng-icons/lucide';
-import { NgIcon, provideIcons } from '@ng-icons/core';
-import { ZardSegmentedComponent } from '@/shared/components/segmented';
+import { provideIcons } from '@ng-icons/core';
 import { Match } from '@/profile/match';
 import { ZardAvatarComponent, ZardAvatarGroupComponent } from '@/shared/components/avatar';
-import { DdragonService } from '@/global/ddragon-service';
+import { DdragonService } from '@/ddragon/ddragon-service';
 
 @Component({
   selector: 'app-match-history-card',
@@ -15,8 +14,6 @@ import { DdragonService } from '@/global/ddragon-service';
     ZardCardComponent,
     ZardBadgeComponent,
     ZardButtonComponent,
-    NgIcon,
-    ZardSegmentedComponent,
     ZardAvatarComponent,
     ZardAvatarGroupComponent,
   ],

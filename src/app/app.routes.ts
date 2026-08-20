@@ -1,15 +1,10 @@
 import { Routes } from '@angular/router';
-import { Landing } from './feature/landing/landing/landing';
 import { ProfileDashboard } from '@/profile/profile-dashboard/profile-dashboard';
 import { ProfileOverview } from '@/profile/profile-overview/profile-overview';
 import { summonerResolver } from '@/profile/summoner-resolver';
 import { ProfileMatchList } from '@/profile/profile-match-list/profile-match-list';
 
 export const routes: Routes = [
-  {
-    path: '',
-    component: Landing,
-  },
   {
     path: 'profile/:puuid',
     component: ProfileDashboard,

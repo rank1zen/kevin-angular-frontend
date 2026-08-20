@@ -1,6 +1,5 @@
 import { Component, inject, input, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { ZardTabComponent, ZardTabGroupComponent } from '@/shared/components/tabs';
 import { Summoner } from '@/profile/summoner';
 import { NgOptimizedImage } from '@angular/common';
 import { toSignal } from '@angular/core/rxjs-interop';
