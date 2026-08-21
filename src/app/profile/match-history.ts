@@ -1,0 +1,35 @@
+export interface MatchHistory {
+  id: string;
+  region: string;
+  match_id: string;
+  puuid: string;
+  gameMode: string;
+  date: Date;
+  duration: number;
+  version: number;
+  winner_id: string;
+  team_id: string;
+  participant_id: string;
+  championId: string;
+  championLevel: number;
+  teamPosition: string;
+  summonerSpellIds: string[];
+  itemIds: string[];
+  runeIds: string[];
+  kills: number;
+  deaths: number;
+  assists: number;
+  kill_participation: number;
+  creep_score: number;
+  creep_score_per_minute: number;
+  damage_dealt: number;
+  damage_taken: number;
+  damage_delta_counterpart: number;
+  damage_share: number;
+  gold_earned: number;
+  gold_delta_counterpart: number;
+  gold_share: number;
+  vision_score: number;
+  control_wards_bought: number;
+  rank: string;
+}

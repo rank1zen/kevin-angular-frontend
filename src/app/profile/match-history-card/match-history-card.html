@@ -1,24 +1,16 @@
-<z-card class="min-w-xl">
-  <div class="flex items-start gap-4 justify-between">
-    <div class="flex items-start gap-4">
-      <div class="flex gap-0.5 items-start">
-        <z-avatar [zSrc]="ddragonService.getChampionIconUrl(2)" zShape="rounded"/>
-        <z-avatar-group>
-          <z-avatar zSrc="https://ddragon.leagueoflegends.com/cdn/16.10.1/img/spell/SummonerFlash.png" zSize="sm" zShape="rounded"/>
-          <z-avatar zSrc="https://ddragon.leagueoflegends.com/cdn/16.10.1/img/spell/SummonerDot.png" zSize="sm" zShape="rounded"/>
-        </z-avatar-group>
-      </div>
-      <div class="flex flex-col gap-1.5">
-        <h3 class="font-semibold tracking-tight leading-none">Ranked Solo/Duo</h3>
-        <div class="flex gap-1">
-          <z-badge zType="secondary">13:11</z-badge>
-          <z-badge zType="secondary">Fri May 22</z-badge>
-        </div>
-      </div>
+<z-card>
+  <div z-card-header>
+    <div class="flex">
+      <img
+        [ngSrc]="ddragonService.getImageUrl('championSquare', matchHistory().championId)"
+        alt="Champion"
+        width="36"
+        height="36"
+        class="rounded-full"
+      >
     </div>
-    <div>
-      <button z-button zSize="sm">Expand
-      </button>
+    <div class="flex">
+
     </div>
   </div>
 </z-card>
