@@ -1,17 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { LandingScreen } from './landing-screen';
 
-import { NavbarMenu } from './navbar-menu';
-
-describe('NavbarMenu', () => {
-  let component: NavbarMenu;
-  let fixture: ComponentFixture<NavbarMenu>;
+describe('LandingScreen', () => {
+  let component: LandingScreen;
+  let fixture: ComponentFixture<LandingScreen>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NavbarMenu],
+      imports: [LandingScreen],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(NavbarMenu);
+    fixture = TestBed.createComponent(LandingScreen);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
