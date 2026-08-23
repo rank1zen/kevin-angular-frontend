@@ -2,11 +2,15 @@ import { Routes } from '@angular/router';
 import { ProfileDashboard } from '@/profile/profile-dashboard/profile-dashboard';
 import { ProfileOverview } from '@/profile/profile-overview/profile-overview';
 import { summonerResolver } from '@/profile/summoner-resolver';
-import { ProfileMatchList } from '@/profile/profile-match-list/profile-match-list';
+import { LandingScreen } from '@/landing/landing-screen/landing-screen';
 
 export const routes: Routes = [
   {
-    path: 'profile/:puuid',
+    path: '',
+    component: LandingScreen,
+  },
+  {
+    path: 'profile/:region/:tag/:name',
     component: ProfileDashboard,
     resolve: {
       summoner: summonerResolver,
@@ -16,10 +20,6 @@ export const routes: Routes = [
       {
         path: 'overview',
         component: ProfileOverview,
-      },
-      {
-        path: 'match-list',
-        component: ProfileMatchList,
       },
     ],
   },

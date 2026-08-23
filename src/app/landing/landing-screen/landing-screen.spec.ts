@@ -1,17 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { LandingScreen } from './landing-screen';
 
-import { ChampionWidget } from './champion-widget';
-
-describe('ChampionWidget', () => {
-  let component: ChampionWidget;
-  let fixture: ComponentFixture<ChampionWidget>;
+describe('LandingScreen', () => {
+  let component: LandingScreen;
+  let fixture: ComponentFixture<LandingScreen>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ChampionWidget],
+      imports: [LandingScreen],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ChampionWidget);
+    fixture = TestBed.createComponent(LandingScreen);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
